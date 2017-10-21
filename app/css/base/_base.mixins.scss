@@ -1,0 +1,26 @@
+
+//This mixin deals with the various browser specific properties that are set for css elements
+@mixin vendor($property, $value...)
+{
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    #{$property}: $value;
+}
+
+//This mixin allows the hover and focus classes to be code togther
+@mixin hocus()
+{
+    &:hover, &:focus
+    {
+        @content;
+    }
+}
+
+// the font mixin to allow the icons to be applied as classes
+@mixin fontawesome-icon {
+    font-family: FontAwsome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

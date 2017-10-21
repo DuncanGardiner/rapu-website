@@ -1,0 +1,28 @@
+@import "Base/base";
+@import "pages/index";
+@import "pages/nav";
+@import "pages/footer";
+
+blockquote
+{
+    border-left: 2px solid $color2;
+    padding-left: $spacing-normal;
+}
+
+.box
+{
+    background: $color3;
+    padding: $spacing-normal;
+// > means a child element to this item
+    > p { margin: 0; }
+}
+
+.rounded-box
+{
+    // Extend inherits styles from other elements by name
+    @extend .box;
+//include is used to fire off mixins which act like functions for Sass
+    @include vendor(border-radius, 20px);
+}
+
+

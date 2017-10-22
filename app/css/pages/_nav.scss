@@ -1,19 +1,34 @@
+@import "Base/base.hamberger";
 
+#nav{
+    padding:0;
+}
 
 .nav-container{
     background-color: $nav-bg;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
+    padding: 10px;
+    width: 98%;
+    margin: 0 auto;  
+    border-bottom: 2px solid $rapu-red;
+    justify-content: space-between;
+     
 }
 
+.navbar-brand{
+    display: none;
+}
 
 /* menu base styles */
-
 .nav-wrapper{
     ul{
         list-style-type: none;
         padding: 0;
+        overflow: hidden;
+        height: 0;
+    }
+
+    ul.open{
+        height:auto;
     }
 
     a{
@@ -21,12 +36,17 @@
         text-align: center;
         color: $font-color;
         display: block;
-        padding: 10px;  
+        padding: 10px;
+        border-bottom: 1px solid $blue-color;  
     }
 
     a:hover{
         color: $rapu-hover;
     }
+}
+
+.navbar-nav.close{
+    display: none;
 }
 
 /* Flex Style */
@@ -36,59 +56,31 @@
 
     .nav-container{
         display: flex;
-        justify-content: space-between;
+        position: fixed;
+
+       
     }
 
-    .nav-wrapper ul{
-        display: flex;
-        justify-content: flex-end;
+    .navbar-brand{
+        display: inline-block;
+        margin-right: 40px;
+        background-image: url(/img/Rapu_Logo3.png);
+        font-size: $font-larger;
+        font-weight: $font-weight-bold;
+        color: $font-color;
+        text-decoration: none;
     }
-}
+    .nav-wrapper{
+        padding:0;
+        margin-right: 20px;
+        
+        ul{
+            height: auto;
+            display: flex;
+        }
 
-/* Hammberger menu */
-#hamberger-wrapper {
-	background:#29afd1;
-	display:inline-block;
-	border-radius:500px;
-	margin:10px;
-	position: relative;
-  padding:80px;
-	cursor:pointer;
-}
-
-.main-item {
-	width:150px;
-	height:150px;
-	position:relative;
-}
-
-.line {
-	position: absolute;
-	height: 15px;
-	width:100%;
-	background:white;
-	border-radius:10px;
-	transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
-}
-
-.line01 {
-	top:19%;
-}
-
-.line02 {
-	top:49%;
-}
-
-.line03 {
-	top:79%;
-}
-
-.menu.close .line01 {
-	transform:rotate(45deg);
-	top:49%;
-}
-
-.menu.close .line02, .menu.close .line03 {
-	transform:rotate(-45deg);
-	top:49%;
+        li{
+            padding-right:8em;
+       }
+    }  
 }

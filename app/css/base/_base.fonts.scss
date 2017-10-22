@@ -1,9 +1,22 @@
 //Base Fonts being used are Google Fonts Quicksand
 @import "base.palette";
+@import "base.mixins";
+
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
 
 body {font-family: 'Quicksand' , sans-serif;}
+
+.icon::before {
+    display: inline-block;
+    margin-right: .5em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
 
 
 
@@ -20,16 +33,16 @@ $globe-icon: '\f0ac';
 $globe-icon: '\f0ac';
 
 
-//Fone Icon class names
-// .icon-globe {
-//     //Other styling
-//     &:before {
-//       @include fontawesome-icon();
-//       color: #333;
-//       content: $globe-icon;
-//       margin-right: 6px;
-//     }
-// }
+Fone Icon class names
+.icon-globe {
+    //Other styling
+    &:before {
+      @include fontawesome-icon();
+      color: #333;
+      content: $globe-icon;
+      margin-right: 6px;
+    }
+}
 
 
 

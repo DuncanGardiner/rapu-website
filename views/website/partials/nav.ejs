@@ -1,36 +1,33 @@
 
     <div class="nav-container">
-      <a href="index.html" class="navbar-brand">Rapu Ltd</a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                   <span class="navbar-toggler-icon"></span>
-               </button>
+      <a href="/home" class="navbar-brand">Rapu Ltd</a>
       <div class="nav-wrapper" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class = "nav-item">
-              <a <%if(page=="Home"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/home">Home</a>
-          </li>
-          <li class = "nav-item">
-              <a <%if(page=="About"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/about">About</a>
-          </li>
-          <li class = "nav-item">
-              <a <%if(page=="Services"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a data-toggle="modal" data-target="#contactModal" class="nav-link">Contact</a>
-            <!-- <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">
-              Contact
-            </button> -->
-          </li>
-          <li class = "nav-item">
-              <a <%if(page=="login"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/auth/login">Log-in</a>
-          </li>
-        </ul>
-        <div id="hamberger-wrapper">
+            <div id="hamberger-wrapper">
                 <div class="main-item menu">
                     <span class="line line01"></span>
                     <span class="line line02"></span>
                     <span class="line line03"></span>
                 </div>
             </div>
+            <ul class="navbar-nav ml-auto">
+            <li class = "nav-item">
+                <a <%if(page=="Home"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/home">Home</a>
+            </li>
+            <li class = "nav-item">
+                <a <%if(page=="About"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/about">About</a>
+            </li>
+            <li class = "nav-item">
+                <a <%if(page=="Services"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="modal" data-target="#contactModal" class="nav-link">Contact</a>
+                <!-- <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">
+                Contact
+                </button> -->
+            </li>
+            <li class = "nav-item">
+                <a <%if(page=="login"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/auth/login">Log-in</a>
+            </li>
+            </ul>
       </div>
     </div>

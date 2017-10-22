@@ -7,38 +7,51 @@
     <!-- Body of Document -->
     <body>
         <div id="content" class"page-container">
-
-            
-            <!-- MAIN FOOTER -->
-            <footer id="footer" class="footer">
-                    <%- include('./partials/footer', {page: "Home"}); %> 
-                </footer> 
-            <!-- SHOWCASE SECTION -->
-            <header id="showcase">
-                <div class="dark-overlay">
-                    <h1>Showcase</h1>
-                </div>
-            </header>
-
-            <!-- FOCUS HEAD -->
-            <section id="focus-head">
-                <div class="container1">
-                    <h1>Focus Head</h1>
-                </div>
-            </section>
-
             <!-- Mian Navigation  -->   
             <nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                     <%- include('./partials/nav', {page: "Home"}); %> 
-                </nav>
-    
-            <!-- FOCUS TOPICS SECTION -->
-            <section id="focus-section" class="bg-light text-muted py-5">
-                <div class="container2">
-                    <h1>Focus Section</h1>
-                </div>
-            </section>
+            </nav>
             
+            <!-- MAIN FOOTER -->
+            <footer id="footer">
+                    <%- include('./partials/footer', {page: "Home"}); %> 
+            </footer> 
+
+            <!-- SHOWCASE SECTION -->
+            <header id="showcase">
+                <div id="dark-overlay">
+                    <h1 id="sc-h1">Seeking Excellence, <strong>Delivering The Remarkable</strong></h1>
+                    <h2 id="sc-h2" class="web-link">Professional Services Normally Reserved For The C-Suite Of Bluechip Companies, Now Available To All.</h2>
+                    <h3 id="sc-h3">Technologies At Affordable Price Brackets.</h3>
+                </div>
+            </header>
+            <!-- FOCUS TOPICS SECTION -->
+            <div id="focus-content">
+                <div id="GDPR">
+                    <h3>GDPR Inventories</h3>
+                    <p>To become GDPR (General Data Protection Regulation) ready requires a deep understanding of your IT infrastructure and data flow. Rapu takes the pain out of that process, by providing expertise in the field of records management and data mapping. We will work with you and your counsel, to identify and categorise your data flow. Allowing an accurate evaluation of your data universe, systems and policies.
+                    </p>
+                </div>
+                <div id="Forencis">
+                        <h3>Digital Forensics</h3>
+                        <p>When trouble strikes, businesses need sound advice and deep expertise from a trusted partner. With experience forged in the fires of Blue-chip litigation, Rapu's experts will guide you through the complexity of using digital evidence in legal debate.
+                                
+                                Using mainstream tools and techniques, Rapu delivers results that will stand up in court.</p>
+                    </div>
+                    <div id="BigData">
+                            <h3>Big Data Strategy</h3>
+                            <p>With more than 25 years of experience in examining and filtering data, for use in investigations or collected for regulatory requests. Rapu's experts have a significant amount of knowledge to bring to the table when an organisation needs to think about its data strategy. Migrations, eDiscovery and Investigations all have a data element. Getting your data strategy wrong will cost you in legal fees, while counsel spends your time and money, reading duplicate documents, instead of analysing relevant content.</p>
+                        </div>
+            </div>
+
+            <!-- FOCUS HEAD -->
+            <div id="focus-head">
+                <h1>Focus Topics</h1>
+                <div id="fh-content"></div>
+                    <p id="fh-para">Topics of the moment and the services we have to support them.</p>
+                    <li id="fh-list" ><a href="/services">Find Out More</a></li>
+                </div>
+            </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

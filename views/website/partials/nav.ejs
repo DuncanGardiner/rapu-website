@@ -20,7 +20,8 @@
                 <a <%if(page=="Services"){%> class="nav-link active"<%}else{%> class="nav-link" <%}%> href="/services">Services</a>
             </li>
             <li class="nav-item">
-                <a data-toggle="modal" data-target="#contactModal" class="nav-link">Contact</a>
+                <!-- <a type="submit" data-toggle="modal" data-target="#contactModal" class="nav-link" id="modal-btn">Contact</a> -->
+                <a id="contact-btn" herf="javascript:void(0)" onclick="toggle_open('contact-popup');">Contact</a>
                 <!-- <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#contactModal">
                 Contact
                 </button> -->

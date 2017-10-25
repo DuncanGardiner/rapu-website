@@ -13,9 +13,9 @@ var MongoStore = require('connect-mongo')(session); //MongoStore is a session ma
 //const path = require('path'); // Helps resolve paths, is used for pointing to the views folder as that is not the default location.
 
 //Configure the MongoDB conntection
-var configDB = require('./config/database.js');
+var configDB = require('../config/database.js');
 mongoose.connect(configDB.url);
-require('./config/passport')(passport); //Passport is our authentication startegy
+require('../config/passport')(passport); //Passport is our authentication startegy
 
 //Use Statements
 app.use(morgan('dev')); //Morgan is allow us to monitor server communications for development purposes
@@ -41,7 +41,7 @@ app.use(passport.session()); // persistent login sessions
 app.set('view engine', 'ejs');//Setting up the EJS view engine
 
 //Creates the Routes
-const openRoutes = require('./app/controllers/openroutes');
+const openRoutes = require('../app/controllers/openroutes');
 app.use(['', '/', '/home', '/about', 'services', '/contact'], openRoutes);
 
 // var auth = express.Router();
